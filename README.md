@@ -1,6 +1,6 @@
 # ✅ คู่มือฉบับสมบูรณ์: วิธีทำ Commit มากกว่า 10 ครั้งใน GitHub ก่อนวันที่ 1 กรกฎาคม เพื่อเข้าร่วม Zama Developer Program
 
-คู่มือนี้จะช่วยให้เพื่อนๆสามารถทำ **15 commits ใน GitHub** ได้ภายในวันเดียว โดยใช้ **GitHub Codespaces** ได้ง่ายๆ ซึ่ง Codespace จะไม่ได้เกี่ยวข้องกับหรือยุ่งเกี่ยวกับคอมเรา ทำให้ปลอดภัยมากขึ้น พร้อมสำหรับเข้าร่วม
+คู่มือนี้จะช่วยให้เพื่อนๆสามารถทำ **15 commits ใน GitHub** ได้ภายในวันเดียว โดยใช้ **GitHub Codespaces** ได้ง่ายๆ ซึ่ง Codespace จะไม่ได้เกี่ยวข้องกับหรือยุ่งเกี่ยวกับคอมเรา ทำให้ปลอดภัยมากขึ้น พร้อมสำหรับเข้าร่วม  Developer Program
 
 ---
 
@@ -94,4 +94,14 @@ GIT_AUTHOR_DATE="2025-06-28T18:42:33" GIT_COMMITTER_DATE="2025-06-28T18:42:33" g
 echo "Commit 15 line" >> README.md
 git add README.md
 GIT_AUTHOR_DATE="2025-06-30T23:55:51" GIT_COMMITTER_DATE="2025-06-30T23:55:51" git commit -m "Commit 15"
+```
 
+5️⃣ ส่ง Commit ขึ้น GitHub ด้วย git push
+เมื่อคุณทำ Commit ครบทั้ง 15 ครั้งแล้ว ขั้นตอนสุดท้ายคือการส่งขึ้น GitHub ด้วยคำสั่งนี้:
+
+```bash
+git push
+```
+- ปกติจะ push ขึ้นทันที หรือรอประมาณ ไม่เกิน 10 นาที
+- เปิดหน้า GitHub Profile (เช่น github.com/yourusername)
+- จะเห็น Commit ทั้งหมดแสดงบน Timeline
