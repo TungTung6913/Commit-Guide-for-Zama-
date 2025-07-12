@@ -38,72 +38,102 @@
 ![วาง Command](https://github.com/TungTung6913/Commit-Guide-for-Zama-/blob/main/Screenshot%202568-07-12%20at%2020.51.56.png?raw=true)
 
 
-คัดลอกและวางคำสั่งชุดนี้ทีเดียว โดยคำสั่งนี้จะมีระบุเวลาการ Commit ซึ่งผมตั้งไว้ให้แล้วว่าก่อนวันที่ 1 July ตามเกนท์ของทาง Zama เพื่อนๆสามารถปรับเปลี่ยนวันเองได้และเพิ่มจำนวน Commit ตามต้องการได้ครับ:
+คัดลอกและวางคำสั่งชุดนี้ทีเดียว โดยคำสั่งนี้จะมีระบุเวลาการ Commit ซึ่งผมตั้งไว้ให้แล้วว่าก่อนวันที่ 1 July ตามเกนท์ของทาง Zama เพื่อนๆสามารถปรับเปลี่ยนวันเองได้และเพิ่มจำนวน Commit ตามต้องการได้ครับ (โดย Command ที่ผมใช้ผมพยายามปรับให้ดูสมจริงที่สุด):
 
 ```bash
-echo "Commit 1 line" >> README.md
+### 1. Initial README
+echo "# Project Helper CLI" > README.md
 git add README.md
-GIT_AUTHOR_DATE="2025-06-02T10:12:17" GIT_COMMITTER_DATE="2025-06-02T10:12:17" git commit -m "Commit 1"
+GIT_AUTHOR_DATE="2025-06-01T08:00:00" GIT_COMMITTER_DATE="2025-06-01T08:00:00" git commit -m "init: create README with project title"
 
-echo "Commit 2 line" >> README.md
+### 2. Add description
+echo "" >> README.md
+echo "Project Helper CLI คือโปรเจกต์ตัวอย่างสำหรับจำลอง workflow จริงบน GitHub VS Code Spaces" >> README.md
 git add README.md
-GIT_AUTHOR_DATE="2025-06-04T14:43:02" GIT_COMMITTER_DATE="2025-06-04T14:43:02" git commit -m "Commit 2"
+GIT_AUTHOR_DATE="2025-06-01T13:30:00" GIT_COMMITTER_DATE="2025-06-01T13:30:00" git commit -m "docs: add short project description"
 
-echo "Commit 3 line" >> README.md
+### 3. Add Features section
+echo "" >> README.md
+echo "## Features" >> README.md
+echo "- ใช้งานผ่าน VS Code Spaces ได้" >> README.md
+echo "- พัฒนาโดย Dev team เพื่อทดสอบ Git" >> README.md
+echo "- รองรับ commit ย้อนหลัง / แสดง log / revert / conflict" >> README.md
 git add README.md
-GIT_AUTHOR_DATE="2025-06-06T08:25:39" GIT_COMMITTER_DATE="2025-06-06T08:25:39" git commit -m "Commit 3"
+GIT_AUTHOR_DATE="2025-06-02T10:00:00" GIT_COMMITTER_DATE="2025-06-02T10:00:00" git commit -m "docs: add features section"
 
-echo "Commit 4 line" >> README.md
+### 4. Add Installation section
+echo "" >> README.md
+echo "## Installation" >> README.md
+echo "\`\`\`bash" >> README.md
+echo "git clone <repo-url>" >> README.md
+echo "cd project-helper-cli" >> README.md
+echo "bash helper.sh" >> README.md
+echo "\`\`\`" >> README.md
 git add README.md
-GIT_AUTHOR_DATE="2025-06-08T19:17:11" GIT_COMMITTER_DATE="2025-06-08T19:17:11" git commit -m "Commit 4"
+GIT_AUTHOR_DATE="2025-06-03T09:00:00" GIT_COMMITTER_DATE="2025-06-03T09:00:00" git commit -m "docs: add installation steps"
 
-echo "Commit 5 line" >> README.md
-git add README.md
-GIT_AUTHOR_DATE="2025-06-10T13:55:46" GIT_COMMITTER_DATE="2025-06-10T13:55:46" git commit -m "Commit 5"
+### 5. Create docs/api.md
+mkdir -p docs
+echo "# API Usage" > docs/api.md
+git add docs/api.md
+GIT_AUTHOR_DATE="2025-06-03T12:00:00" GIT_COMMITTER_DATE="2025-06-03T12:00:00" git commit -m "docs: create api.md with initial header"
 
-echo "Commit 6 line" >> README.md
-git add README.md
-GIT_AUTHOR_DATE="2025-06-12T16:38:29" GIT_COMMITTER_DATE="2025-06-12T16:38:29" git commit -m "Commit 6"
+### 6. Add /auth endpoint to docs/api.md
+echo "- วิธี request /auth" >> docs/api.md
+git add docs/api.md
+GIT_AUTHOR_DATE="2025-06-04T15:00:00" GIT_COMMITTER_DATE="2025-06-04T15:00:00" git commit -m "docs: add /auth endpoint"
 
-echo "Commit 7 line" >> README.md
-git add README.md
-GIT_AUTHOR_DATE="2025-06-14T09:05:03" GIT_COMMITTER_DATE="2025-06-14T09:05:03" git commit -m "Commit 7"
+### 7. Create helper.sh
+echo 'echo "Hello Dev!"' > helper.sh
+chmod +x helper.sh
+git add helper.sh
+GIT_AUTHOR_DATE="2025-06-05T11:00:00" GIT_COMMITTER_DATE="2025-06-05T11:00:00" git commit -m "feat: create helper.sh script"
 
-echo "Commit 8 line" >> README.md
-git add README.md
-GIT_AUTHOR_DATE="2025-06-17T20:20:57" GIT_COMMITTER_DATE="2025-06-17T20:20:57" git commit -m "Commit 8"
+### 8. Add alias to helper.sh
+echo 'alias run="bash helper.sh"' >> helper.sh
+git add helper.sh
+GIT_AUTHOR_DATE="2025-06-06T13:30:00" GIT_COMMITTER_DATE="2025-06-06T13:30:00" git commit -m "chore: add alias run in helper.sh"
 
-echo "Commit 9 line" >> README.md
+### 9. Update README formatting
+sed -i '' 's/Spaces/VS Code Spaces/' README.md
 git add README.md
-GIT_AUTHOR_DATE="2025-06-18T11:48:21" GIT_COMMITTER_DATE="2025-06-18T11:48:21" git commit -m "Commit 9"
+GIT_AUTHOR_DATE="2025-06-07T18:00:00" GIT_COMMITTER_DATE="2025-06-07T18:00:00" git commit -m "docs: fix typo in README formatting"
 
-echo "Commit 10 line" >> README.md
-git add README.md
-GIT_AUTHOR_DATE="2025-06-20T17:35:40" GIT_COMMITTER_DATE="2025-06-20T17:35:40" git commit -m "Commit 10"
+### 10. Create update.md
+echo "- เพิ่มคำอธิบาย push" > update.md
+git add update.md
+GIT_AUTHOR_DATE="2025-06-08T15:44:00" GIT_COMMITTER_DATE="2025-06-08T15:44:00" git commit -m "docs: create update.md to track change"
 
-echo "Commit 11 line" >> README.md
-git add README.md
-GIT_AUTHOR_DATE="2025-06-22T07:19:10" GIT_COMMITTER_DATE="2025-06-22T07:19:10" git commit -m "Commit 11"
+### 11. Add log.txt
+touch log.txt
+echo "log init" > log.txt
+git add log.txt
+GIT_AUTHOR_DATE="2025-06-09T07:00:00" GIT_COMMITTER_DATE="2025-06-09T07:00:00" git commit -m "chore: create log file"
 
-echo "Commit 12 line" >> README.md
-git add README.md
-GIT_AUTHOR_DATE="2025-06-24T22:27:58" GIT_COMMITTER_DATE="2025-06-24T22:27:58" git commit -m "Commit 12"
+### 12. Add .gitignore
+echo "log.txt" > .gitignore
+git add .gitignore
+GIT_AUTHOR_DATE="2025-06-09T09:30:00" GIT_COMMITTER_DATE="2025-06-09T09:30:00" git commit -m "chore: ignore log.txt from versioning"
 
-echo "Commit 13 line" >> README.md
-git add README.md
-GIT_AUTHOR_DATE="2025-06-26T12:06:44" GIT_COMMITTER_DATE="2025-06-26T12:06:44" git commit -m "Commit 13"
+### 13. Remove log.txt from Git
+git rm --cached log.txt
+GIT_AUTHOR_DATE="2025-06-10T08:30:00" GIT_COMMITTER_DATE="2025-06-10T08:30:00" git commit -m "fix: remove tracked log.txt after ignoring"
 
-echo "Commit 14 line" >> README.md
-git add README.md
-GIT_AUTHOR_DATE="2025-06-28T18:42:33" GIT_COMMITTER_DATE="2025-06-28T18:42:33" git commit -m "Commit 14"
+### 14. Revert /auth endpoint
+git revert HEAD~8 --no-edit
+GIT_AUTHOR_DATE="2025-06-11T10:10:00" GIT_COMMITTER_DATE="2025-06-11T10:10:00" git commit --amend --no-edit
 
-echo "Commit 15 line" >> README.md
+### 15. Final edit README.md
+echo "" >> README.md
+echo "## Developer" >> README.md
+echo "This project is developed by Dev team for demo purposes only." >> README.md
 git add README.md
-GIT_AUTHOR_DATE="2025-06-30T23:55:51" GIT_COMMITTER_DATE="2025-06-30T23:55:51" git commit -m "Commit 15"
+GIT_AUTHOR_DATE="2025-06-12T15:00:00" GIT_COMMITTER_DATE="2025-06-12T15:00:00" git commit -m "docs: add developer section"
+
 ```
 
 5️⃣ ส่ง Commit ขึ้น GitHub ด้วย git push
-เมื่อทำ Commit ครบทั้ง 15 ครั้งแล้ว ขั้นตอนสุดท้ายคือการส่งขึ้น GitHub ด้วยคำสั่งนี้:
+เมื่อทำ Commit ครบทั้ง 10 ครั้งแล้ว ขั้นตอนสุดท้ายคือการส่งขึ้น GitHub ด้วยคำสั่งนี้:
 
 ```bash
 git push
