@@ -97,11 +97,11 @@ GIT_AUTHOR_DATE="2025-06-30T23:55:51" GIT_COMMITTER_DATE="2025-06-30T23:55:51" g
 ```
 
 5️⃣ ส่ง Commit ขึ้น GitHub ด้วย git push
-เมื่อคุณทำ Commit ครบทั้ง 15 ครั้งแล้ว ขั้นตอนสุดท้ายคือการส่งขึ้น GitHub ด้วยคำสั่งนี้:
+เมื่อทำ Commit ครบทั้ง 15 ครั้งแล้ว ขั้นตอนสุดท้ายคือการส่งขึ้น GitHub ด้วยคำสั่งนี้:
 
 ```bash
 git push
 ```
 - ปกติจะ push ขึ้นทันที หรือรอประมาณ ไม่เกิน 10 นาที
 - เปิดหน้า GitHub Profile (เช่น github.com/yourusername)
-- จะเห็น Commit ทั้งหมดแสดงบน Timeline
+- ✅ จะเห็น Commit ทั้งหมดแสดงบน Timeline เป็นอันเสร็จ โดยให้กลับไปที่ : [https://guild.xyz/zama/developer-program](https://guild.xyz/zama/developer-program) แล้วรอซักพักว่า Verify แล้วรียัง
