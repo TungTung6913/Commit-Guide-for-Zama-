@@ -18,8 +18,9 @@
 
 ### 2️⃣ เปิด GitHub Codespaces
 
+- เข้าไปที่ Repository ที่เราพึ่งสร้างใหม่
 - กดปุ่มสีเขียว `<> Code`
-- เลือก `Open with Codespaces` → `+ New codespace`
+- เลือก `Open with Codespaces` → `+ Create Codespace on Main`
 - รอโหลด (~20 วินาที)
 
 ---
